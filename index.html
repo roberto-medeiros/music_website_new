@@ -15,9 +15,38 @@
             </ul>
     </div>
     <div class="content">
+
         <div class="left-col">
-            <h1>THE REAL SOUND</h1>
+            <h1>THE <br>REAL</br> SOUND</h1>
         </div>
+
+        <div class="right-col">
+          <p>Click <strong>Here</strong> To Linsten</p>
+          <img src="img/play.png" alt="Play Button" id="icon">
+        </div>
+
     </div>
   </div>
+  <audio id="mySong">
+    <source src="media/Leo Delgado - Awakening (Ezequiel Anile & Nicolas Petracca Remix).mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      if(mySong.paused){
+        mySong.play();
+        icon.src = "img/pause.png";
+      }else{
+        mySong.pause();
+        icon.src = "img/play.png";
+
+      }
+    }
+
+  </script>
 </body>
+
+//https://youtu.be/w5fCIhI0FyE 
